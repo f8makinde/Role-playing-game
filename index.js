@@ -26,10 +26,17 @@ const hero = {
    
     diceCount: 2
  }
+  
+ function Character(data){
+    this.elementId = data.elementId
+    this.name = data.name
+    this.avatar = data.avatar
+    this.health = data.health
+    this.diceCount = data.diceCount
 
-  function renderChar(data){
-    
-    const {elementId, name, avatar, health, diceCount} = data;
+    this.getCharacterHtml = function(){ 
+
+    const {elementId, name, avatar, health, diceCount} = this;
     let diceHtml = getDiceHtml(diceCount)
     document.getElementById(elementId).innerHTML = `<div class="character-card">
         <h4 class="name">${name}</h4>
@@ -38,10 +45,13 @@ const hero = {
         <div class="dice-container">
         ${diceHtml}
         </div>
-    </div>`
-  }
+    </div>` 
 
-renderChar(hero);
-renderChar(monster);
+    }
+ }
 
+ const wizard = new Character(hero)
+ const orc= new Character(monster)
 
+ wizard.getCharacterHtml()
+ orc.getCharacterHtml()
