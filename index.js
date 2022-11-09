@@ -5,6 +5,8 @@ import Character from "./character.js";
   function attack(){
     wizard.getDiceHtml()
     orc.getDiceHtml()
+    wizard.takeDamage(wizard.currentDiceScore)
+    orc.takeDamage(orc.currentDiceScore)
     render()
   }
  const wizard = new Character(characterData.hero)
