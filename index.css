@@ -15,6 +15,7 @@ main {
     align-items: center;
     margin-top: .5rem;
 } 
+
 @media(min-width:550px){
    main {
         flex-direction: row;

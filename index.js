@@ -1,6 +1,12 @@
 import { characterData } from "./data.js";
 import Character from "./character.js";
 
+
+  function attack(){
+    wizard.getDiceHtml()
+    orc.getDiceHtml()
+    render()
+  }
  const wizard = new Character(characterData.hero)
  const orc= new Character(characterData.monster)
 
@@ -8,4 +14,5 @@ import Character from "./character.js";
     document.getElementById("hero").innerHTML = wizard.getCharacterHtml();
     document.getElementById("monster").innerHTML = orc.getCharacterHtml();
   }
+  document.getElementById("attack-button").addEventListener("click", attack)
   render()
