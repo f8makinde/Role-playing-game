@@ -10,7 +10,7 @@
          name: "Orc",
          avatar: "images/orc.png",
          health: 10, 
-         diceCount: 2,
+         diceCount: 1,
          currentDiceScore: []
       }
 }
